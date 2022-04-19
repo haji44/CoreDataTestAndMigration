@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ClubEntity" representedClassName="ClubEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="repesentitive" optional="YES" attributeType="String"/>
+        <relationship name="member" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="club" inverseEntity="PersonEntity"/>
+    </entity>
+    <entity name="PersonEntity" representedClassName="PersonEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="club" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClubEntity" inverseName="member" inverseEntity="ClubEntity"/>
+    </entity>
+    <elements>
+        <element name="ClubEntity" positionX="-347.0703125" positionY="71.31640625" width="128" height="88"/>
+        <element name="PersonEntity" positionX="-18" positionY="45" width="128" height="73"/>
+    </elements>
+</model>
