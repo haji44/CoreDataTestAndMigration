@@ -10,7 +10,10 @@ import CoreData
 
 class PersistenceController {
     static let shared = PersistenceController()
-
+    var viewCotext: NSManagedObjectContext {
+        PersistenceController.shared.container.viewContext
+    }
+    
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
@@ -18,11 +21,9 @@ class PersistenceController {
         let newPerson = PersonEntity(context: viewContext)
         newPerson.name = "Taku"
 
-
-        let newClub = ClubEntity(context: viewContext)
-        newClub.name = "Swimming"
-        newClub.repesentitive = "Hajimel Phelps"
-
+//        let newClub = ClubEntity(context: viewContext)
+//        newClub.name = "Swimming"
+//        newClub.repesentitive = "Hajimel Phelps"
 
         do {
             try viewContext.save()
@@ -42,13 +43,11 @@ class PersistenceController {
             container.persistentStoreDescriptions.first?.url =
             URL(fileURLWithPath: "/dev/null")
         }
-
         container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError(error.localizedDescription)
             }
         }
-
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }

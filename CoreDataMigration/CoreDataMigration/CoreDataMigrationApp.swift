@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CoreDataMigrationApp: App {
+    let persistance = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, persistance.container.viewContext)
         }
     }
 }

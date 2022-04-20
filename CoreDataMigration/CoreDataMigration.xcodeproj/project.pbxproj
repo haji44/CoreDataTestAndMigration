@@ -16,6 +16,10 @@
 		20C49461280EE24100D99F1B /* CoreDataMigrationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C49460280EE24100D99F1B /* CoreDataMigrationUITestsLaunchTests.swift */; };
 		20C49473280EE29300D99F1B /* CoreDataMigration.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20C49471280EE29300D99F1B /* CoreDataMigration.xcdatamodeld */; };
 		20C49475280EE33000D99F1B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C49474280EE33000D99F1B /* PersistenceController.swift */; };
+		20C494B5280EE74900D99F1B /* PersonEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C494B1280EE74900D99F1B /* PersonEntity+CoreDataClass.swift */; };
+		20C494B6280EE74900D99F1B /* PersonEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C494B2280EE74900D99F1B /* PersonEntity+CoreDataProperties.swift */; };
+		20C494B7280EE74900D99F1B /* ClubEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C494B3280EE74900D99F1B /* ClubEntity+CoreDataClass.swift */; };
+		20C494B8280EE74900D99F1B /* ClubEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C494B4280EE74900D99F1B /* ClubEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		20C49460280EE24100D99F1B /* CoreDataMigrationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMigrationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		20C49472280EE29300D99F1B /* CoreDataMigration.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataMigration.xcdatamodel; sourceTree = "<group>"; };
 		20C49474280EE33000D99F1B /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		20C494B1280EE74900D99F1B /* PersonEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20C494B2280EE74900D99F1B /* PersonEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		20C494B3280EE74900D99F1B /* ClubEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		20C494B4280EE74900D99F1B /* ClubEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClubEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 		20C49470280EE29300D99F1B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20C494B1280EE74900D99F1B /* PersonEntity+CoreDataClass.swift */,
+				20C494B2280EE74900D99F1B /* PersonEntity+CoreDataProperties.swift */,
+				20C494B3280EE74900D99F1B /* ClubEntity+CoreDataClass.swift */,
+				20C494B4280EE74900D99F1B /* ClubEntity+CoreDataProperties.swift */,
 				20C49471280EE29300D99F1B /* CoreDataMigration.xcdatamodeld */,
 				20C49474280EE33000D99F1B /* PersistenceController.swift */,
 			);
@@ -271,8 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C494B5280EE74900D99F1B /* PersonEntity+CoreDataClass.swift in Sources */,
 				20C49446280EE24000D99F1B /* ContentView.swift in Sources */,
+				20C494B7280EE74900D99F1B /* ClubEntity+CoreDataClass.swift in Sources */,
 				20C49444280EE24000D99F1B /* CoreDataMigrationApp.swift in Sources */,
+				20C494B8280EE74900D99F1B /* ClubEntity+CoreDataProperties.swift in Sources */,
+				20C494B6280EE74900D99F1B /* PersonEntity+CoreDataProperties.swift in Sources */,
 				20C49473280EE29300D99F1B /* CoreDataMigration.xcdatamodeld in Sources */,
 				20C49475280EE33000D99F1B /* PersistenceController.swift in Sources */,
 			);
