@@ -21,9 +21,10 @@ class PersistenceController {
         let newPerson = PersonEntity(context: viewContext)
         newPerson.name = "Taku"
 
-//        let newClub = ClubEntity(context: viewContext)
-//        newClub.name = "Swimming"
-//        newClub.repesentitive = "Hajimel Phelps"
+        let newClub = ClubEntity(context: viewContext)
+        newClub.name = "Swimming"
+        newClub.repesentitive = "Hajimel Phelps"
+        newClub.addToMember(newPerson)
 
         do {
             try viewContext.save()

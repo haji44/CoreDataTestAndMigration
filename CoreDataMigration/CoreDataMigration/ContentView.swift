@@ -12,6 +12,8 @@ struct ContentView: View {
 
     @FetchRequest( entity: PersonEntity.entity(), sortDescriptors: []
     ) var people: FetchedResults<PersonEntity>
+    @FetchRequest( entity: ClubEntity.entity(), sortDescriptors: []
+    ) var club: FetchedResults<ClubEntity>
 
     var body: some View {
         NavigationView {
