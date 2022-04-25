@@ -13,7 +13,7 @@ struct CoreDataMigrationApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environment(\.managedObjectContext, persistance.container.viewContext)
+            ContentView().environment(\.managedObjectContext, persistance.viewCotext)
         }
     }
 }

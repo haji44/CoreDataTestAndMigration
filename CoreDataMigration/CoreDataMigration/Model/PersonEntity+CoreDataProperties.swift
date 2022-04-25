@@ -26,6 +26,14 @@ extension PersonEntity {
     static func create() {
         let newPerson = PersonEntity(context: viewContext)
         newPerson.name = "Hajime"
+
+        let newClub = ClubEntity(context: viewContext)
+        newClub.name = "Swimming"
+        newClub.repesentitive = "Hajime"
+
+        newPerson.club = NSSet.init(array: [newClub])
+
+    
         save()
     }
 
