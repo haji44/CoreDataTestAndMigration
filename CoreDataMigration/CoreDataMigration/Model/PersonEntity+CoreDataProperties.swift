@@ -19,6 +19,17 @@ extension PersonEntity {
     @NSManaged public var name: String?
     @NSManaged public var club: NSSet?
 
+    public var _name: String {
+        name ?? "Unknwon Name"
+    }
+
+    public var clubArray: [ClubEntity] {
+        let set = club as? Set<ClubEntity> ?? []
+        return set.sorted {
+            $0._name < $1._name
+        }
+    }
+
     static var viewContext: NSManagedObjectContext {
         PersistenceController.shared.viewCotext
     }

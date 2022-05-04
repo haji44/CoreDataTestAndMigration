@@ -20,6 +20,18 @@ extension ClubEntity {
     @NSManaged public var repesentitive: String?
     @NSManaged public var member: NSSet?
 
+    public var _name: String {
+        name ?? "Unknown name"
+    }
+    public var _repesentitive: String {
+        repesentitive ?? "Unknown name"
+    }
+    public var _member: [PersonEntity] {
+        let set = member as? Set<PersonEntity> ?? []
+        return set.sorted {
+            $0._name < $1._name
+        }
+    }
 }
 
 // MARK: Generated accessors for member
